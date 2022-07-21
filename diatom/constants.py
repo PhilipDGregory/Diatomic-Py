@@ -137,3 +137,23 @@ Na23Rb87 = {"I1":1.5,
             "a0":0*h, #Not reported
             "a2":0*h, #Not reported
             "Beta":0}
+
+#from Aldegunde et al., PRA 96, 042506 (2017)
+#https://journals.aps.org/pra/abstract/10.1103/PhysRevA.96.042506
+Na23Cs133 = {"I1":3/2,#
+            "I2":7/2,#
+            "d0":4.53*DebyeSI, #Theory value
+            "Brot":0.962e9*h,
+            "Drot":0*h,
+            "Q1":-0.097e6*h,#
+            "Q2":0.150e6*h,#
+            "C1":14.2*h,#
+            "C2":854.5*h,#
+            "C3":105.6*h,#
+            "C4":3941.8*h,#
+            "MuN":0.0*muN, #No value
+            "Mu1":1.478*(1-639.2e-6)*muN,#
+            "Mu2":0.738*(1-6278.7e-6)*muN,#
+            "a0":0*h, #Not reported
+            "a2":0*h, #Not reported
+            "Beta":0}
