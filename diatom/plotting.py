@@ -261,7 +261,7 @@ def export_state_comp(fname,Nmax,I1,I2,states,labels=None,
 
 def transition_plot(energies,states,gs,Nmax,I1,I2,TDMs=None,
             pm = +1, Offset=0,fig=pyplot.gcf(),
-            log=False,minf=None,maxf=None,prefactor=1e-3,col=None):
+            log=False,minf=None,maxf=None,prefactor=1e-3,col=None,print_vals=False):
 
     ''' Create a TDM plot
 
@@ -476,6 +476,8 @@ def transition_plot(energies,states,gs,Nmax,I1,I2,TDMs=None,
                 iz+=1
                 #bar plot for transition strengths. Relative to spin-stretched TDM
                 ax_bar.barh(f[j],numpy.abs(d),color=blue,height=1e4*prefactor)
+                if print_vals == True:
+                    print('sigma_minus: ' + str(f[j]) + 'Hz , TDM:' + str(numpy.abs(d)))
     
             d=dp[j]
             if abs(d)>0 and j<max(l2):
@@ -493,6 +495,8 @@ def transition_plot(energies,states,gs,Nmax,I1,I2,TDMs=None,
                 ip+=1
                 #bar plot for transition strengths. Relative to spin-stretched TDM
                 ax_bar.barh(f[j],numpy.abs(d),color=green,height=1e4*prefactor)
+                if print_vals == True:
+                    print('sigma_plus: ' + str(f[j]) + 'Hz , TDM:' + str(numpy.abs(d)))
     
             d=dm[j]
             if abs(d)>0 and j<max(l2):
@@ -510,6 +514,8 @@ def transition_plot(energies,states,gs,Nmax,I1,I2,TDMs=None,
                 im +=1
                 #bar plot for transition strengths. Relative to spin-stretched TDM
                 ax_bar.barh(f[j],numpy.abs(d),color=red,height = 1e4*prefactor)
+                if print_vals == True:
+                    print('pi: ' + str(f[j]) + 'Hz , TDM:' + str(numpy.abs(d)))
 
     #setup log axes for axis 4 (bar plots)
     if log:
