@@ -187,7 +187,7 @@ def dipole(Nmax,I1,I2,d,M):
             for N2 in range(0,int(Nmax+1)):
                 for M2 in range(N2,-(N2+1),-1):
                     dmat[i,j]=d*numpy.sqrt((2*N1+1)*(2*N2+1))*(-1)**(M1)*\
-                    wigner_3j(N1,1,N2,-M1,M,M2)*wigner_3j(N1,1,N2,0,0,0)
+                    wigner_3j(N1,1,N2,-M1,M*(N2-N1),M2)*wigner_3j(N1,1,N2,0,0,0)
                     j+=1
             j=0
             i+=1
