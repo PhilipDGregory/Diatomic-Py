@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="diatom",
-    version="1.2.2",
+    version="1.2.3",
     author="Jake Blackmore",
     author_email="j.a.blackmore@durham.ac.uk",
     description="A package for calculating rotational and hyperfine structure of singlet diatomic molecules.",
