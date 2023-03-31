@@ -179,7 +179,7 @@ def dipole(Nmax,I1,I2,d,M):
         Dmat (numpy.ndarray) - dipole matrix
     '''
     shape = numpy.sum(numpy.array([2*x+1 for x in range(0,int(Nmax+1))]))
-    dmat = numpy.zeros((shape,shape),dtype= numpy.complex)
+    dmat = numpy.zeros((shape,shape),dtype= complex)
     i =0
     j =0
     for N1 in range(0,int(Nmax+1)):
